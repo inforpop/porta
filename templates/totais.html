@@ -2,6 +2,7 @@
 <html>
    
    <style> 
+   
         input[type=button], input[type=submit], input[type=reset] {
           background-color:blue;
           border: none;
@@ -15,7 +16,8 @@
         }
         </style>
    <body>
-      <form action="http://localhost:5000/result" method = "post">
+      
+      <form action="{{ url_for('result') }}"  method = "post">
     
         <label for="mes">Mês:</label>
         <select name="mes" id="mes">
@@ -44,6 +46,7 @@
     <hr>
    
          <p><input type="submit" value="Gerar Gráfico"></p>
-      </form>   
+      </form>
+         
    </body>
 </html>
