@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html>
    
-   <style> 
-   
-        input[type=button], input[type=submit], input[type=reset] {
-          background-color:blue;
-          border: none;
-          color: white;
-          padding: 16px 32px;
-          text-decoration: none;
-          margin: 4px 2px;
-          cursor: pointer;
-          width: 160px;
-          
-        }
-        </style>
    <body>
       
       <form action="{{ url_for('result') }}"  method = "post">
@@ -35,17 +21,23 @@
        <option value="01">Demitidos</option>
        </select>
        <hr>     
-    <input type="radio" name="options" id="options" value="Nível Escolar"> Nível Escolar </input><br>
-    <input type="radio" name="options" id="options" value="Sexo"> Sexo </input><br>
-    <input type="radio" name="options" id="options" value="Cor"> Cor </input><br>
-    <input type="radio" name="options" id="options" value="Região"> Região </input><br>
-    <input type="radio" name="options" id="options" value="Estado"> Estado </input><br>
-    <input type="radio" name="options" id="options" value="Municipio"> Municipio </input><br>
-    <input type="radio" name="options" id="options" value="Cargo"> Cargo </input><br>
-    <input type="radio" name="options" id="options" value="Tipo de Deficiência"> Tipo de Deficiência </input><br>
+    <input type="radio" name="options" id="options" value="Nível Escolar" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Nível Escolar </input><br>
+    <input type="radio" name="options" id="options" value="Sexo" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Sexo </input><br>
+    <input type="radio" name="options" id="options" value="Cor" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Cor </input><br>
+    <input type="radio" name="options" id="options" value="Região" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Região </input><br>
+    <input type="radio" name="options" id="options" value="Estado" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Estado </input><br>
+    <input type="radio" name="options" id="options" value="Municipio" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Municipio </input><br>
+    <input type="radio" name="options" id="options" value="Cargo" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Cargo </input><br>
+    <input type="radio" name="options" id="options" value="Tipo de Deficiência" onclick="if(document.getElementById('btnSubmit').disabled==true){document.getElementById('btnSubmit').disabled=false}"> Tipo de Deficiência </input><br>
     <hr>
    
-         <p><input type="submit" value="Gerar Gráfico"></p>
+    <p><input type="submit" name = "btnSubmit"  id="btnSubmit" disabled="disabled" style="background: blue; border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 160px;" value="Gerar Gráfico" /></p>
       </form>
          
    </body>
